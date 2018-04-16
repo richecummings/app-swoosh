@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FDk-JS-mrC"/>
                         <viewControllerLayoutGuide type="bottom" id="0hg-A7-ziW"/>
@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="Ybh-Ol-UIb">
             <objects>
-                <viewController id="jKL-LN-C6q" sceneMemberID="viewController">
+                <viewController id="jKL-LN-C6q" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lKD-JD-7oU"/>
                         <viewControllerLayoutGuide type="bottom" id="Ejb-59-Jyh"/>
@@ -130,7 +130,7 @@
                                             <constraint firstAttribute="height" constant="20" id="IPR-NS-FHq"/>
                                             <constraint firstAttribute="width" constant="150" id="fBV-5R-Xqs"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -185,6 +185,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="jKL-LN-C6q" eventType="touchUpInside" id="ipg-kB-Uyr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmL-8L-Aaf">
                                 <rect key="frame" x="16" y="30" width="44" height="33"/>
@@ -217,16 +220,19 @@
                             <constraint firstItem="ma9-fe-aQa" firstAttribute="top" secondItem="lKD-JD-7oU" secondAttribute="bottom" constant="20" id="zdC-Hz-pf1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="nPE-lC-RuZ" kind="show" identifier="skillVCSegue" id="lQP-vk-rmU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJQ-1C-wu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="m4z-wG-T14" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Z20-BX-ehb">
             <objects>
-                <viewController id="nPE-lC-RuZ" sceneMemberID="viewController">
+                <viewController id="nPE-lC-RuZ" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hY7-wT-96a"/>
                         <viewControllerLayoutGuide type="bottom" id="e0p-fG-BOQ"/>
@@ -250,7 +256,7 @@
                                             <constraint firstAttribute="height" constant="20" id="nh6-ZV-xhr"/>
                                             <constraint firstAttribute="width" constant="150" id="rZE-Vp-Dtg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
